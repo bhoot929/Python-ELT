@@ -29,6 +29,9 @@ def main():
     print(get_min_sal)
     df1 = df[df.sal.isin(df_top_3)]
     print(df1)
+    
+    #print data in sorted form of Salary:
+    print(df1.sortlevel(df1.sal,ascending=False))
 
 
 
