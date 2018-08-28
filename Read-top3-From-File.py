@@ -8,6 +8,11 @@ no,name,age,sal
 5,sasa,30,12412412'''
 
 ''' generate file having top 3 salary '''
+''' output should be
+no,name,age,sal
+2,nmv,40,12321
+3,dsadsa,30,31313
+5,sasa,30,12412412 '''
 
 import pandas as pd
 
