@@ -1,0 +1,16 @@
+def fib(num):
+    l = list()
+    for i in range(num):
+        if i <=1:
+            l.append(i)
+        else:
+            j = l[i-1] + l[i-2]
+            l.append(j)
+    return l
+
+
+l1 = fib(5)
+print(l1)
+
+'''output:
+[0, 1, 1, 2, 3] '''
