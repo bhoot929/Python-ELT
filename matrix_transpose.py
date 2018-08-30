@@ -1,22 +1,26 @@
+'''
+3*3 matrix will convert to 3*3
+4*3 matrix will convert to 3*4
+'''
+
+matrix = [[1,2,3],[4,5,6],[7,8,9],[10,11,12]]
 
 
-matrix =[[1,2,3,4],
-        [6,7,8,9],
-        [11,12,13,14],
-        [16,17,18,19]]
+length = len(matrix)
+breath = len(matrix[0])
+
+print('length:',length)
+print('\n')
+print('breath:',breath)
+print('\n')
+
+new_m = [[0 for i in range(length)] for j in range(breath)]
 
 
-l = len(matrix)
-print(matrix)
 
-for i in range(l):
-        for j in range(l):
-            if(i!=j):
-                matrix[i][j] =  matrix[j][i]
+for i in range(breath):
+    for j in range(length):
 
+            new_m[i][j] = matrix[j][i]
 
-print(matrix)
-
-''' output:
-[[1, 2, 3, 4], [6, 7, 8, 9], [11, 12, 13, 14], [16, 17, 18, 19]]
-[[1, 6, 11, 16], [6, 7, 12, 17], [11, 12, 13, 18], [16, 17, 18, 19]]'''
+print(new_m)
