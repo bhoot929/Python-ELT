@@ -24,3 +24,13 @@ for i in range(breath):
             new_m[i][j] = matrix[j][i]
 
 print(new_m)
+
+'''output:
+length: 4
+
+
+breath: 3
+
+
+[[1, 4, 7, 10], [2, 5, 8, 11], [3, 6, 9, 12]]
+'''
