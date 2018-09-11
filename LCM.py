@@ -1,28 +1,30 @@
-# The least common multiple (L.C.M.) of two numbers
-# is the smallest positive integer that is perfectly
-# divisible by the two given numbers.
+# Python Program to find the L.C.M. of two input number
 
-def LCM_Funct(x,y):
-    if x > y:
-        greater = x
-        lesser = y
-    else:
-        greater = y
-        lesser = x
-    num = greater
-    num = x*y
-    lcm = 0
+# define a function
+def lcm(x, y):
+   """This function takes two
+   integers and returns the L.C.M."""
 
-    for i in range(num+1):
+   # choose the greater number
+   if x > y:
+       greater = x
+   else:
+       greater = y
 
-            if((i+lesser)%x ==0 and (i+lesser)%y==0):
-                    lcm = i+lesser
-                    break;
+   while(True):
+       if((greater % x == 0) and (greater % y == 0)):
+           lcm = greater
+           break
+       greater += 1
 
+   return lcm
 
+# change the values of num1 and num2 for a different result
+num1 = 54
+num2 = 24
 
-    return lcm
+# uncomment the following lines to take input from the user
+#num1 = int(input("Enter first number: "))
+#num2 = int(input("Enter second number: "))
 
-num1 = 7
-num2 = 9
-print('The LCM of', num1, 'and', num2, 'is' , LCM_Funct(num1,num2))
+print("The L.C.M. of", num1,"and", num2,"is", lcm(num1, num2))
